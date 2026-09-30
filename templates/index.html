@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Usuarios</title>
+</head>
+<body>
+    <div>
+        <div class="divuno">
+            <h1>Nuevo Usuario</h1>
+            <form action="/Crear_usuario" method="post">
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="" required><br>
+                <label for="email">E-mail: </label>
+                <input type="email" name="email" id="" required><br>
+                <label for="password">Password: </label>
+                <input type="text" name="contrasena" id="" required><br>
+                <input type="submit" value="Crear">
+            </form>
+        </div>
+
+        <div class="divdos">
+            <h1>Todos los Usuarios</h1>
+            <table class="tabla_usuarios">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody>
+                {% for usuario in usuarios %}
+                    <td><a href="">{{ usuario.nombre }}</a></td>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
