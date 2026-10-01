@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `esquema_canciones`.`favoritos` (
   CONSTRAINT `fk_usuarios_has_canciones_canciones1`
     FOREIGN KEY (`cancion_id`)
     REFERENCES `esquema_canciones`.`canciones` (`id`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE -- lo q me costo estasola linea d codigo won 
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 

@@ -29,10 +29,11 @@
                 </thead>
                 <tbody>
                 {% for usuario in usuarios %}
-                    <td><a href="">{{ usuario.nombre }}</a></td>
+                    <td><a href="usuarios/{{ usuario.id }}">{{ usuario.nombre }}</a></td>
                 {% endfor %}
                 </tbody>
             </table>
+            <a href="/canciones">Agregar canciones</a>
         </div>
     </div>
 </body>

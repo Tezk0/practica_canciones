@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario numero {{ usuario.id }}</title>
+</head>
+<body>
+    <h1>{{ usuario.nombre }}</h1>
+    <div class="favoritos">
+        <h1>Favoritos</h1>
+        <table>
+            <thead>
+                <th>Cancion</th>
+                <th>Artista</th>
+            </thead>
+            <tbody>
+            {% for cancion in favoritos %}
+                <td>{{ cancion.titulo }}</td>
+                <td>{{ cancion.artista }}</td>
+            {% endfor %}
+            </tbody>
+        </table>
+        <a href="/">Volver</a>
+    </div>
+
+    <div class="agregar_fav">
+        <h1>Agregar Favorito</h1>
+        <form action="/Add_favorito" method="post">
+        <input type="hidden" name="usuario_id" value="{{ usuario.id }}">
+
+            <select name="cancion_id" required>
+                {% for cancion in canciones %}
+                <option value= "{{ cancion.id }}">
+                    {{ cancion.titulo }}
+                </option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Agregar">
+        </form>
+    </div>
+</body>
+</html>

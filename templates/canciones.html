@@ -6,6 +6,32 @@
     <title>Canciones</title>
 </head>
 <body>
-    
+    <div>
+        <div class="div_canciones1">
+            <h1>Nueva Cancion</h1>
+            <form action="/Crear_cancion", method="post">
+                <label for="titulo">Titulo: </label>
+                <input type="text" name="titulo" id="" required><br>
+                <label for="">Artista: </label>
+                <input type="text" name="artista" id="" required><br>
+                <input type="submit" value="Crear">
+            </form>
+            <a href="/">Inicio</a>
+        </div>
+
+        <div class="div_canciones2">
+            <h1>Todas las canciones</h1>
+            <table>
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody>
+                {% for cancion in canciones %}
+                    <td><a href="/cancion/{{ cancion.id }}">{{ cancion.titulo }}</a></td>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ cancion.titulo }}</title>
+</head>
+<body>
+    <h1>{{ cancion.titulo }}</h1>
+    <h2>{{ cancion.artista }}</h2>
+    <div class="divgrandepacancion">
+        <div>
+            <table>
+                <thead>
+                    <th>En los favoritos de:</th>
+                </thead>
+                <tbody>
+                    {% for usuario in usuarios_favoritos %}
+                        <td>-{{ usuario.nombre }}</td>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h1>Agregar Favorito</h1>
+            <form action="/Agregar_usuario_fav" method="post">
+                <input type="hidden" name="cancion_id" value="{{ cancion.id }}">
+                <label for="">Usuario</label>
+                <select name="usuario_id" id="">
+                    {% for usuario in usuarios %}
+                        {% if usuario.id not in usuarios_favoritos_ids %}
+                        <option value="{{ usuario.id }}">
+                            {{ usuario.nombre }}
+                        </option>
+                        {% else %}
+                        {# ta vacio #}
+                        {% endif %}
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Agregar">
+            </form>
+        </div>
+    </div>
+    <a href="/">Inicio</a>
+</body>
+</html>

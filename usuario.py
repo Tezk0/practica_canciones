@@ -27,3 +27,10 @@ class Usuario:
             usuarios.append(cls(usuario))
 
         return usuarios
+
+    @classmethod
+    def get_by_id(cls,datos):
+        query = "SELECT * FROM usuarios WHERE id = %(id)s;"
+        resultados = connectToMySQL(DB_NAME).query_db(query,datos)
+
+        return cls(resultados[0])
