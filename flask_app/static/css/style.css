@@ -86,3 +86,31 @@ body{
     } 
   }
 }
+
+/* cancion */
+
+.h1titulo{
+  font-size: 50px;
+  margin: 0%;
+}
+
+.divgrandepacancion{
+  display: flex;
+}
+
+.divchicopacancion1{
+  margin-right: 50px;
+  table{
+    padding: 5px;
+    tr{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.divchicopacancion2{
+  h1{
+    margin-top: 0px;
+  }
+}
