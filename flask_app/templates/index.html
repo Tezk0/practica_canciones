@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
     <title>Usuarios</title>
 </head>
 <body>
-    <div>
-        <div class="divuno">
+    <div class="divgrandedelindex">
+        <div class="divunodelindex">
             <h1>Nuevo Usuario</h1>
             <form action="/Crear_usuario" method="post">
                 <label for="nombre">Nombre: </label>
@@ -32,8 +36,8 @@
                     <td><a href="usuarios/{{ usuario.id }}">{{ usuario.nombre }}</a></td>
                 {% endfor %}
                 </tbody>
-            </table>
-            <a href="/canciones">Agregar canciones</a>
+            </table><br>
+            <a href="/canciones">Agregar Cancion</a>
         </div>
     </div>
 </body>

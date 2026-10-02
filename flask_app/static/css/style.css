@@ -1,0 +1,88 @@
+.comic-relief-regular {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-relief-bold {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+    font-family: "Comic Relief", system-ui;
+}
+
+/*index */
+.divgrandedelindex{
+  display: flex;
+}
+
+.divunodelindex{
+  margin-right: 100px;
+}
+
+.tabla_usuarios{
+  border: 1px solid black;
+  padding: 5px;
+  tr{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* usuarios */
+
+.divgrandedeusuarios{
+  display: flex;
+
+}
+.nombredelusuario{
+  display: inline;
+  font-size: 50px;
+  margin-left: 20px;
+  }
+
+.favoritos{
+  margin-right: 50px;
+  table{
+    border: 1px solid black;
+    .table_title{
+      background-color: grey;
+      th{
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+.agregar_fav{
+  h2, form{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  h2{
+    padding: 0%;
+  }
+}
+/* Canciones  */
+
+.divgrandedecanciones{
+  display: flex;
+}
+
+.div_canciones1{
+  margin-right: 50px;
+}
+
+.div_canciones2{
+  table{
+    border: 1px solid black;
+    padding: 5px;
+    tr{
+      display: flex;
+      flex-direction: column;
+    } 
+  }
+}

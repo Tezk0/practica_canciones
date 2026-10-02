@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
     <title>Canciones</title>
 </head>
 <body>
-    <div>
+    <div class="divgrandedecanciones">
         <div class="div_canciones1">
             <h1>Nueva Cancion</h1>
             <form action="/Crear_cancion", method="post">
@@ -15,7 +19,7 @@
                 <label for="">Artista: </label>
                 <input type="text" name="artista" id="" required><br>
                 <input type="submit" value="Crear">
-            </form>
+            </form><br>
             <a href="/">Inicio</a>
         </div>
 
